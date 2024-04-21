@@ -1,6 +1,6 @@
 let barrier = 51;
 
-let name = prompt('enter your name');
+let name = prompt('enter your name').toUpperCase();
 let score = Number(prompt('enter your test score'));
 
 function getFeedBack(score, name) {
@@ -13,7 +13,9 @@ function getFeedBack(score, name) {
   } else if (score >= 0 && score < 51) {
     return ` unfortunetly ${name}, you couldn't pass the test. you had ${
       barrier - score
-    } less than barrier`;
+    } less than barrier, try prepare better next time.`;
+  } else {
+    return 'invalid score';
   }
 }
 
