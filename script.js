@@ -17,4 +17,7 @@ function getFeedBack(score, name) {
   }
 }
 
+console.log(`your score: ${score}`);
+console.log(`barrier: ${barrier}`);
+
 console.log(getFeedBack(score, name));
