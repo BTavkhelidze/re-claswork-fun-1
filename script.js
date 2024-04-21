@@ -5,15 +5,18 @@ let score = Number(prompt('enter your test score'));
 
 function getFeedBack(score, name) {
   if (score >= 90) {
-    return `${name} congretulation you have a great result`;
+    return `${name} გილოცავთ, თქვენ მიიღეთ ძალიან კარგი შეფასება`;
   } else if (score >= 51 && score < 90) {
-    return `congretulation ${name}, you took ${
+    if ((score = 51)) {
+      return `${name} თქვენ გადალახეთ ზღვარი  `;
+    }
+    return `გილოცავთ ${name} , თქვენ ${
       score - barrier
-    } more than barrier `;
+    } ქულით მეტი აიღეთ ბარიერზე `;
   } else if (score >= 0 && score < 51) {
-    return ` unfortunetly ${name}, you couldn't pass the test. you had ${
+    return ` სამწუხაროდ ${name} თქვენ ვერ გადალახეთ მინიმალური ბარიერი, თქვენ დაგაკლდათ ${
       barrier - score
-    } less than barrier, try prepare better next time.`;
+    } ქულა, უკეთესად მოემზადეთ`;
   } else {
     return 'invalid score';
   }
